@@ -14,9 +14,9 @@ function App () {
        <BrowserRouter>
         <Header/>
         <Routes>
-       <Route path='CountryApi' element={<CountryApi/>}/>
+       <Route exact path='/' element={<CountryApi/>}/>
        
-       <Route path='/name:'element={<SingleCountry/>}/>
+       <Route exact path='/:name'element={<SingleCountry/>}/>
     
       <Route path='Error' element={<Error/>} />
        

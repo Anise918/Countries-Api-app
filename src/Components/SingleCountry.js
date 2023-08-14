@@ -27,14 +27,21 @@ export default function SingleCountry() {
 
   return (
     <>
-      <section>
+      <section className='p-8 md:py-0' >
         {country.map((item) => (
-          <div key={item.population}>
+          <div key={item.population} className='grid grid-cols-1 gap-8 md:grid-cols-2 md:place-items-center md:h-screen'>
             <article>
-              {item.flag?.svg && <img src={item.flag.svg} alt={item.name.common} />}
+              {item.flags && item.flags[0] && (
+                <img src={item.flags[0]} alt={item.name.common} />
+              )}
             </article>
             <article>
-              <h1>{item.name?.official}</h1>
+              <h1 className='font-bold text-white-900 text-4xl lg:text-6xl'>{item.name?.official}</h1>
+              <ul className='lists'>
+                <li>Capital:{item.capital}</li>
+                <li>Region:{item.region}</li>
+                <li>Population:{item.population.toLocaleString()}</li>
+              </ul>
             </article>
           </div>
         ))}

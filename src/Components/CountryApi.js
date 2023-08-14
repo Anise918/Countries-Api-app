@@ -7,8 +7,10 @@ import Article from './Article'
   const[isLoading, setIsLoading] = useState(false)
   const[isError, setIsError] =useState(false)
   const[searchText, setSearchText] =useState('')
-  const[region,setRegion] =useState('')
-   /* {
+  const regions=[
+
+  
+    {
       name: 'Europe',
     },
     {
@@ -24,7 +26,7 @@ import Article from './Article'
       name: 'Oceania',
     },
     
-   ];*/
+   ];
   
   
   
@@ -74,7 +76,7 @@ import Article from './Article'
 }
 function handleFilterByRegion(e){
   e.preventDefault();
-  filterByRegion(region)
+  filterByRegion()
 }
 
 
@@ -87,9 +89,9 @@ function handleFilterByRegion(e){
       isError &&<h1 >Error Occurred</h1>
      }
      
-     <div>
-      <form className='form' onSubmit={handleSearchCountry}>
-      <input
+     <div className= 'filter-form'>
+      <form  onSubmit={handleSearchCountry}>
+      <input className= 'form'
         type='search'
         name='search'
         id='search'
@@ -105,8 +107,8 @@ function handleFilterByRegion(e){
           <select
             name='select'
             id='select'
-            value={region}
-            onChange={(e) =>setRegion(e.target.value)}
+            value={regions.name}
+            onChange={(e) =>filterByRegion(e.target.value)}
             className='select'>
             <option value='filter by region'>Filter By Region</option>
             <option value='africa'>Africa</option>
@@ -119,7 +121,7 @@ function handleFilterByRegion(e){
         </form>
 
      </div>
-     <section className='grid-container'>
+     <section className='grid-container' >
      {
       countries.map((country) => (
         

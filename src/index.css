@@ -2,42 +2,103 @@
 @tailwind components;
 @tailwind utilities;
   
-  
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,700&display=swap');
+
+
   
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body {
   font-family: 'Nunito Sans', sans-serif;
   padding: 20px;
   background-color: #202d36;
-  color: white;
+  color:white;
+
+  overflow:hiddden;
 }
+
+.dark-theme{
+  background-color: #202d36;
+  color:white;
+}
+
+
+.light-theme {
+  background-color: #ffffff;
+  color: #202d36;
+}
+
 
 .img {
   max-width: 100%;
+  /*height:250px;*/
   border-radius: 5px 5px 0 0;
+  
 }
 
 .icon {
-  height: 30px;
-  width: 30px;
+  
+  color:white;
+}
+.header{
+  display:flex;
+  align-items:center;
+  justify-contents:space-between;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
+
+.h1{
+  color: #FFF;
+font-family: Nunito Sans;
+font-size: 24px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+}
+.form{
+  width: 480px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #2B3844;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+  margin-top:20px;
+  margin-bottom:20px;
+  
+}
+.filter.region{
+  color: #FFF;
+font-family: Nunito Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; 
+}
+.select{
+ width: 200px;
+height: 56px;
+flex-shrink: 0;border-radius: 5px;
+background: #2B3844;
+box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+
+}
 .filter {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px 0;
+}
+.filter-form{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 .grid-container {
@@ -49,6 +110,38 @@ body {
 @media (min-width: 640px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .form{
+    width: 100%;
+    height: 48px;
+    flex-shrink: 0;
+  }
+  .filter-form{
+    display:flex;
+    align-items:center;
+    justify-contents:space-between;
+
+  }
+  /*.header{
+    color: #FFF;
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 20px;
+    width: 375px;
+    height: 80px;
+    flex-shrink: 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+  }*/
+  .img{
+    width: 303.858px;
+    height: 160px;
+    flex-shrink: 0;
+
   }
 }
 
@@ -62,14 +155,123 @@ body {
   .grid-container {
     grid-template-columns: repeat(4, 1fr);
   }
+  /*.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1440px;
+    height: 80px;
+    flex-shrink: 0;
+    background: #2B3844;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+    color:#FFF;
+  
+  }*/
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    color:white;
+    background: #2B3844;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+    height:80px;
+    
+    
+    
+
+
+    
+    
+
+
+  }
+
+  .header{
+    
+    
+  }
+  .h1{
+    color: #FFF;
+  font-family: Nunito Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  }
+  .form{
+    width: 480px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #2B3844;
+    box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+    margin-top:20px;
+    margin-bottom:20px;
+    
+  }
+  .filter.region{
+  
+    color: #FFF;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
+  }
+  .select{
+   width: 200px;
+  height: 56px;
+  flex-shrink: 0;border-radius: 5px;
+  background: #2B3844;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+  
+  }
+  .filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .filter-form{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  
+
+
+  .img{
+width:100%;
+height:160px;
+flex-shrink: 0;
+  }
+  .h2{
+    width:240px;
+    color: #FFF;
+    font-family: Nunito Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 26px;
+  }
+  .span{
+color: #FFF;
+font-family: Nunito Sans;
+font-size: 14px;
+font-style: normal;
+font-weight:300;
+line-height: 16px; 
+  }
 }
 
 .details {
   background-color: #2b3743;
-  margin-top: -10px;
-  padding: 20px;
+  margin-top: -20px;
+  padding:  40px 20px;
   border-radius: 0 0 5px 5px;
+
 }
+
 
 .details h2 {
   padding-bottom: 10px;

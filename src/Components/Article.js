@@ -13,9 +13,9 @@ export default function Article({flags,name,population,capital,region}) {
         <div className='details'>
         <h2>{name.common}</h2>
         <ul className='lists'>
-            <li>Population:{population.toLocaleString()}</li>
-            <li>Capital:{capital}</li>
-            <li>Region:{region}</li>
+            <li>Population:<span className='span' style={{fontWeight:'300'}}>{population.toLocaleString()}</span></li>
+            <li>Capital:<span className='span' style={{fontWeight:'300'}}>{capital}</span></li>
+            <li>Region:<span className='span'>{region}</span></li>
         </ul>
         </div>
     </article>
