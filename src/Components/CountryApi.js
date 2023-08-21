@@ -89,9 +89,9 @@ function handleFilterByRegion(e){
       isError &&<h1 >Error Occurred</h1>
      }
      
-     <div className= 'filter-form'>
-      <form  onSubmit={handleSearchCountry}>
-      <input className= 'form'
+     <div className= 'filter-form flex flex-col gap 4 md:flex-row md:items-center md: justify-between'>
+      <form  onSubmit={handleSearchCountry} className='max-w-4xl md:flex-2'>
+      <input className= 'form py-3 px-4 '
         type='search'
         name='search'
         id='search'
@@ -121,12 +121,11 @@ function handleFilterByRegion(e){
         </form>
 
      </div>
-     <section className='grid-container' >
+     <section className='grid-container mx-auto ' >
      {
       countries.map((country) => (
         
         <Article key ={country.name.common}{...country}/>
-        
           
       )
       )
