@@ -89,9 +89,9 @@ function handleFilterByRegion(e){
       isError &&<h1 >Error Occurred</h1>
      }
      
-     <div className= 'filter-form flex flex-col gap 4 md:flex-row md:items-center md: justify-between'>
+     <div className= 'filter-form flex flex-col gap 4 md:flex-row md:items-center md: justify-between dark:bg-gray-900'>
       <form  onSubmit={handleSearchCountry} className='max-w-4xl md:flex-2'>
-      <input className= 'form py-3 px-4 '
+      <input className= 'form py-3 px-4 dark:bg-gray-900'
         type='search'
         name='search'
         id='search'
@@ -102,14 +102,14 @@ function handleFilterByRegion(e){
 
       </form>
       
-      <form className='filter.region' onSubmit={handleFilterByRegion}>
+      <form className='filter.region dark:bg-gray-900' onSubmit={handleFilterByRegion}>
       
           <select
             name='select'
             id='select'
             value={regions.name}
             onChange={(e) =>filterByRegion(e.target.value)}
-            className='select'>
+            className='select dark:bg-gray'>
             <option value='filter by region'>Filter By Region</option>
             <option value='africa'>Africa</option>
             <option value='america'>America</option>

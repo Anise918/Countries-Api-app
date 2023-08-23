@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BsFillMoonFill } from 'react-icons/bs';
 
-const Header = () => {
-  const [currentTheme, setCurrentTheme] = useState('light');
+const Header = (props) => {
+  /*const [currentTheme, setCurrentTheme] = useState('light');
    useEffect(()=>{
     const header= document.querySelector('.header')
     header.classList.add(currentTheme==='light'? 'light-theme': 'dark-theme')
       }
-      ,[currentTheme]);
+      ,[currentTheme]);*/
 
 
 
-  function toggleTheme(newTheme) {
+ /* function toggleTheme(newTheme) {
     setCurrentTheme(newTheme);
     document.body.classList.toggle('light-theme', newTheme === 'light');
     document.body.classList.toggle('dark-theme', newTheme === 'dark');
@@ -19,15 +19,16 @@ const Header = () => {
     const header=document.querySelector('.header');
     header.classList.toggle('light-theme', newTheme === 'light');
     header.classList.toggle('dark-theme', newTheme === 'dark'); 
-  }
+  }*/
   
   return (
-    <header className={`header ${currentTheme === 'light' ? 'light-theme' : 'dark-theme'}`}>
+    <header className={'header  '  + (props.lightTheme ? 'light' : '')}>
+
       <div>
         <h1>Where in the world?</h1>
       </div>
-      <div className='icon' onClick={() => toggleTheme(currentTheme === 'light' ? 'dark' : 'light')}>
-        <BsFillMoonFill />
+      <div className='icon'>
+        <BsFillMoonFill onClick={props.toggleLightTheme} />
       </div>
     </header>
   );

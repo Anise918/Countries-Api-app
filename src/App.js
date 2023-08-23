@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import { BrowserRouter, Routes, Route, } from 'react-router-dom'
 import CountryApi from './Components/CountryApi'
 import Header from './Components/Header'
@@ -10,9 +10,24 @@ import 'tailwindcss/tailwind.css'
 
 function App () {
   
+const[lightTheme, setLightTheme]=useState(true)
+function toggleLightTheme(){
+  setLightTheme((prevMode)=>!prevMode)
+}
+useEffect(() => {
+
+  const body = document.body;
+  body.classList.toggle('light-theme', lightTheme);
+  body.classList.toggle('dark-theme', !lightTheme);
+}, [lightTheme]);
+
+  
+  
   return (
        <BrowserRouter>
-        <Header/>
+       <div className={lightTheme ? 'light' : 'dark'}> 
+
+       <Header lightTheme={lightTheme}toggleLightTheme={toggleLightTheme}/>
         <Routes>
        <Route exact path='/' element={<CountryApi/>}/>
        
@@ -21,6 +36,8 @@ function App () {
       <Route path='Error' element={<Error/>} />
        
         </Routes>
+       </div>
+       
        
        </BrowserRouter>
       
