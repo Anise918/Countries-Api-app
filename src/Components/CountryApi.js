@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import Article from './Article'
 
-   const CountryApi = ()=> {
+   const CountryApi = (props)=> {
       
   const[countries,setCountries] = useState([])
   const[isLoading, setIsLoading] = useState(false)
@@ -89,9 +89,10 @@ function handleFilterByRegion(e){
       isError &&<h1 >Error Occurred</h1>
      }
      
-     <div className= 'filter-form flex flex-col gap 4 md:flex-row md:items-center md: justify-between dark:bg-gray-900'>
-      <form  onSubmit={handleSearchCountry} className='max-w-4xl md:flex-2'>
-      <input className= 'form py-3 px-4 dark:bg-gray-900'
+     <div className= 'filter-form flex flex-col gap 4 md:flex-row md:items-center md: justify-between '>
+     <form  className={`max-w-4xl w-full md:flex-2 ${props.lightTheme ? 'light' : ''}`} onSubmit={handleSearchCountry}>
+
+      <input style ={{background:'transparent',}}className= 'form py-3 px-4 w-full align-start lg:w-80'
         type='search'
         name='search'
         id='search'
@@ -102,23 +103,26 @@ function handleFilterByRegion(e){
 
       </form>
       
-      <form className='filter.region dark:bg-gray-900' onSubmit={handleFilterByRegion}>
-      
-          <select
-            name='select'
-            id='select'
-            value={regions.name}
-            onChange={(e) =>filterByRegion(e.target.value)}
-            className='select dark:bg-gray'>
-            <option value='filter by region'>Filter By Region</option>
-            <option value='africa'>Africa</option>
-            <option value='america'>America</option>
-            <option value='asia'>Asia</option>
-            <option value='europe'>Europe</option>
-            <option value='oceania'>Oceania</option>
-          </select>
-        
-        </form>
+      <form style={{border:'black',}} className='filter.region mt-8 mb-3 font-bold w-full lg:ml-80 lg:w-80 dark:gray-900' onSubmit={handleFilterByRegion}>
+  <select
+    name='select'
+    id='select'
+    value={regions.name}
+    onChange={(e) => filterByRegion(e.target.value)}
+    className='select'
+    style={{background:'transparent', }}
+  >
+    <option value='filter by region '>Filter By Region</option>
+    <option  value='africa'>Africa</option>
+    <option value='america'>America</option>
+    <option value='asia'>Asia</option>
+    <option value='europe'>Europe</option>
+    <option value='oceania'>Oceania</option>
+  </select>
+</form>
+
+
+
 
      </div>
      <section className='grid-container mx-auto ' >

@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 
 
-export default function Article({flags,name,population,capital,region}) {
+export default function Article({flags,name,population,capital,region,}) {
     console.log('flags:' ,flags)
   return (
     <>
@@ -17,6 +17,7 @@ export default function Article({flags,name,population,capital,region}) {
             <li>Population:<span className='font-light'>{population.toLocaleString()}</span></li>
             <li>Capital:{capital}</li>
             <li>Region:{region}</li>
+            
             </ul>
             </div>
             </article>

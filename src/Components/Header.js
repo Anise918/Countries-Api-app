@@ -25,7 +25,7 @@ const Header = (props) => {
     <header className={'header  '  + (props.lightTheme ? 'light' : '')}>
 
       <div>
-        <h1>Where in the world?</h1>
+        <h1 className='font-bold'>Where in the world?</h1>
       </div>
       <div className='icon'>
         <BsFillMoonFill onClick={props.toggleLightTheme} />

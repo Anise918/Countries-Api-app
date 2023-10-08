@@ -17,8 +17,8 @@
 body {
   font-family: 'Nunito Sans', sans-serif;
   padding: 20px;
-  background-color: #202d36;
-  color:white;
+  /*background-color: #202d36;
+  color:white;*/
   overflow:hiddden;
   
 }
@@ -29,37 +29,12 @@ body {
 .input.dark-theme{
   background-color:#202c36;
 }
+
+
 .filter-form.dark-theme{
   background-color:#202c36;
 }
-/*.input.dark-theme{
-  background:#202c36;
-}
-.header.dark-theme{
-  background-color: #2B3844;
-  color:white;
-}
-.details.dark-theme{
-  background-color: #2b3743;
-}
-.filter-form.dark-theme{
-  background:#2b3743;
-}
-.form.dark-theme{
-  background:#2b3743;
-}
-.select.dark-theme{
-  border-radius: 5px;
-background: #2B3844;
-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
-}
-.country-card.light-theme{
-  background-color:#FFF;
-  color:black;
-}
-.lists.light-theme{
-  color:black;
-}*/
+
 .light-theme {
   background: #FAFAFA;
   color: #202d36;
@@ -83,7 +58,9 @@ box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
   color:black;
 }
 
-
+.select{
+  background:#202d36;
+}
 
 .h1{
   color: #FFF;
@@ -147,9 +124,10 @@ box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
     display:flex;
     flex-direction:column;
     gap:2px;
-    
 
   }
+  
+  
   .select{
     align-items:flex-start;
   }
@@ -333,4 +311,3 @@ justify-content:space-around;
   padding-bottom: 5px;
   gap:2;
 }
-
