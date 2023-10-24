@@ -22,7 +22,7 @@ const Header = (props) => {
   }*/
   
   return (
-    <header className={'header  '  + (props.lightTheme ? 'light' : '')}>
+    <header className={'header rounded-lg shadow-xl '  + (props.lightTheme ? 'light' : '')}>
 
       <div>
         <h1 className='font-bold'>Where in the world?</h1>

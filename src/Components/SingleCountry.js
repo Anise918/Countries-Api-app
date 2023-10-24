@@ -48,7 +48,7 @@ export default function SingleCountry() {
                 <h3>Borders</h3>
                  <ul className='flex flex-wrap items-start justify-start gap-2'>
                 {item.borders.map((border,index)=> (
-                  <li key={index}className='light:bg-white p-2 text-gray rounded text-xs tracking-wide shadow dark:bg-gray-900 dark:text-gray-400' >{border}</li>
+                  <li key={index}className='light:bg-white p-2 text-gray rounded text-xs tracking-wide shadow-lg dark:bg-gray-900 dark:text-gray-400' >{border}</li>
                 )
                 )}
               </ul>

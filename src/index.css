@@ -14,20 +14,36 @@
 
 }
 
-body {
+.body {
   font-family: 'Nunito Sans', sans-serif;
   padding: 20px;
   /*background-color: #202d36;
   color:white;*/
-  overflow:hiddden;
+  overflow:hidden;
+
+  
   
 }
+
+
+
+
+
 .dark-theme{
   background: #202c36;
   color:white;
+
 }
+.select.light-theme{
+  background:white;
+}
+.lists.dark-theme{
+  color:white;
+}
+
 .input.dark-theme{
-  background-color:#202c36;
+  background-color:#202d36;
+  
 }
 
 
@@ -35,10 +51,10 @@ body {
   background-color:#202c36;
 }
 
-.light-theme {
+/*.light-theme {
   background: #FAFAFA;
   color: #202d36;
-}
+}*/
 /*.header.light-theme{
   color:black;
   background-color:#FFF;

@@ -89,10 +89,10 @@ function handleFilterByRegion(e){
       isError &&<h1 >Error Occurred</h1>
      }
      
-     <div className= 'filter-form flex flex-col gap 4 md:flex-row md:items-center md: justify-between '>
-     <form  className={`max-w-4xl w-full md:flex-2 ${props.lightTheme ? 'light' : ''}`} onSubmit={handleSearchCountry}>
+     <div className= 'filter-form  flex flex-col gap 4 md:flex-row md:items-center md: justify-between '>
+     <form  className={` max-w-4xl w-full md:flex-2 ${props.lightTheme ? 'light' : ''}`} onSubmit={handleSearchCountry}>
 
-      <input style ={{background:'transparent',}}className= 'form py-3 px-4 w-full align-start lg:w-80'
+      <input style ={{background:'transparent',}}className= 'form shadow-xl rounded-lg py-3 px-4 w-full align-start lg:w-80'
         type='search'
         name='search'
         id='search'
@@ -103,14 +103,15 @@ function handleFilterByRegion(e){
 
       </form>
       
-      <form style={{border:'black',}} className='filter.region mt-8 mb-3 font-bold w-full lg:ml-80 lg:w-80 dark:gray-900' onSubmit={handleFilterByRegion}>
+      <form style={{backgroundColor:'transparent',border:'black',}} className='filter.region rounded-lg shadow-lg mt-8 mb-3 font-bold w-full lg:ml-80 lg:w-80 ' onSubmit={handleFilterByRegion}>
   <select
     name='select'
     id='select'
     value={regions.name}
     onChange={(e) => filterByRegion(e.target.value)}
     className='select'
-    style={{background:'transparent', }}
+    style={{background:'transparent'}}
+    
   >
     <option value='filter by region '>Filter By Region</option>
     <option  value='africa'>Africa</option>
@@ -127,7 +128,7 @@ function handleFilterByRegion(e){
      </div>
      <section className='grid-container mx-auto ' >
      {
-      countries.map((country) => (
+      Array.isArray(countries) && countries.map((country) => (
         
         <Article key ={country.name.common}{...country}/>
           
